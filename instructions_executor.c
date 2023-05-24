@@ -16,7 +16,7 @@ void custom_push(stack_t **list_head, unsigned int lineNumber)
 	{
 		if (executionContext.value[0] == '-')
 			s++;
-		for (; executionContext.value[num_sign] != '\0'; num_sign++)
+		for (; executionContext.value[s] != '\0'; s++)
 		{
 			if (executionContext.value[s] > 57 || executionContext.value[s] < 48)
 				has_error = 1;
