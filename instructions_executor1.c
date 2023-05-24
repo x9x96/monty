@@ -50,8 +50,9 @@ void custom_add(stack_t **list_head, unsigned int lineNumber)
  */
 void custom_nop(stack_t **list_head, unsigned int lineNumber)
 {
-	// The parameters list_head and lineNumber are not used in this function,
-	// so the (void) cast is used to suppress compiler warnings about unused variables
+	/* The lineNumber parameter is not used in this function,*/
+	/* so the (void) cast is used to suppress compiler warnings*/
+	/* about an unused variable*/
 	(void) lineNumber;
 	(void) list_head;
 }
