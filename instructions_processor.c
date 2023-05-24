@@ -14,12 +14,12 @@ int processInstruction(stack_t **list_head, unsigned int lineNumber,
 		char *instructionString, FILE *input_file)
 {
 	instruction_t instructions[] = {
-		{"pop", custom_pop},	{"swap", custom_swap},	{"add", custom_add},
-		{"div", custom_div},	{"mul", custom_mul},	{"mod", custom_mod},
-		{"rotl", custom_rotl},	{"rotr", custom_rotr},	{"queue", custom_queue},
-		{"pall", custom_pall},	{"pint", custom_pint},	{NULL, NULL},
-		{"sub", custom_sub},	{"nop", custom_nop},	{"pstr", custom_pstr},
-		{"push", custom_push},	{"pchar", custom_pchar},	{"stack", custom_stack},
+	{"pop", custom_pop},		{"swap", custom_swap},	{"add", custom_add},
+	{"nop", custom_nop},		{"sub", custom_sub},		{"div", custom_div},
+	{"mul", custom_mul},		{"mod", custom_mod},		{"pchar", custom_pchar},
+	{"pstr", custom_pstr},	{"rotl", custom_rotl},	{"rotr", custom_rotr},
+	{"queue", custom_queue},	{"stack", custom_stack},	{"push", custom_push},
+	{"pall", custom_pall},	{"pint", custom_pint},	{NULL, NULL}
 	};
 
 	char *opcode;
