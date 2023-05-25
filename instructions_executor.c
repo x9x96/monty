@@ -10,15 +10,19 @@
  */
 void custom_push(stack_t **list_head, unsigned int lineNumber)
 {
-	int idx, s = 0, has_error = 0;
+	int has_error = 0;
+	int s = 0;
+	int idx;
 
 	if (executionContext.value)
 	{
 		if (executionContext.value[0] == '-')
-			s++;
-		for (; executionContext.value[s] != '\0'; s++)
 		{
-			if (executionContext.value[s] > 57 || executionContext.value[s] < 48)
+			s++;
+		}
+		for ( ; executionContext.value[s] != '\0'; s++)
+		{
+			if (executionContext.value[s] < 48 || executionContext.value[s] > 57)
 				has_error = 1;
 		}
 		if (has_error == 1)
@@ -40,7 +44,9 @@ void custom_push(stack_t **list_head, unsigned int lineNumber)
 	}
 	idx = atoi(executionContext.value);
 	if (executionContext.stackMode == 0)
+	{
 		pushStack(list_head, idx);
+	}
 	else
 		pushQueue(list_head, idx);
 }

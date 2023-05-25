@@ -11,7 +11,7 @@
 
 
 /**
- * struct ProgramContext - variables -args, file, line content
+ * struct ProgramContext - program carrier
  * @value: represents a value or argument
  * @input_file: a pointer to monty file
  * @instructionString: represents the content of a line
