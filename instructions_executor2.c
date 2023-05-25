@@ -135,7 +135,7 @@ void custom_rotl(stack_t **list_head,
 
 	/* If the stack is empty or contains only one element*/
 	/* no rotation is needed*/
-	if ((*list_head)->next == NULL || *list_head == NULL)
+	if (*list_head == NULL || (*list_head)->next == NULL)
 		return;
 
 	new_head = (*list_head)->next;
@@ -167,7 +167,7 @@ void custom_rotr(stack_t **list_head,
 
 	last_node = *list_head;
 
-	if ((*list_head)->next == NULL || *list_head == NULL)
+	if (*list_head == NULL || (*list_head)->next == NULL)
 		return;
 
 	while (last_node->next)
